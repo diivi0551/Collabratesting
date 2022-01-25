@@ -1,0 +1,114 @@
+Select classs;                                                                                                                                                                                                                    |
+      (there are 11 methods)-it is  used for handling the "Dropdown" or "listbox".  *{it should be developed with the help of select and option tag}* |
+                                  [single slelct dropdown                                        Select select = new select(dropdown);                                                              |
+                                   Multi select dropdown]                                                                                                                                                                 |
+                                                                                                                                                                                                                                         |
+1.isMultiple()->Return a boolean value.                                                                                                                                                                         |
+2.getOptions()->return the options in the form of list of webelements.                                                                                                                          |
+3.selectByindex()->[integer]                                                                                                                                                                                           |
+4.selectByVisibletext()->[string]                                                                                                                                                                                     | 
+5.selectByValue()->[string]                                                                                                                                                                                             |
+6.deSelectByIndex()                                                                                                                                                                                                          |
+7.deSelectByValue()
+8.deSelectByVisibleText()
+9.deSelectAll()
+10.getFirstSelectedOption()->gives only single element
+11.getAllSelectedOption(ns 
+*********************************************************************************************************************
+
+Pop-Ups;
+               [ it is a Graphical user interface which appers on top of your webpage when u perform some actions on a WebPage r WebElement.]
+               [this pop-up is used to give some information to end users or take some information from end users]
+
+Type Of Pop-Ups;
+    *Javascript Popup(it is                                                                                                                                                                                                          {driver.switchTo().alert()
+        >Alert popup(it has only ok button) can't be inscpect,moved,draged,we cant do any other actions once it is been accepted                                                                                                                                                                                                                                                                                                                  *accept();
+        >Confirmation Popup(in this we have ok and cancel button)where it asks for the confirmation                                                                                                                                                                                                                                                                                                                                                          *dismiss();
+        >Prompt Popup(details provided by the end users)                                                                                                                                      * getText()return string
+                                                                                                                                                                                                                               * sendkeys(string msg)
+
+*******************************************************************************************
+    *Hidden divison popup/overlays
+    *Window Popup-->Child window pop up
+    *File upload Popup 
+    *Child window Popup-->print pop up
+    *Authentication Popup
+    *Notification Popup---->using (robot class)we can handle the notification popup.
+
+
+--->Hidden division Popups:
+     1.Any pop up which can be inspected is hidden division popup.[eg:Calendar popup]
+     2.Any pop which can be inspected by using any methods is called as the Hidden division Popups.
+[to select  todays date always]
+
+*******************************************************************************************
+^We should not hard code our test data in our automation scripts.^
+automation script           -------->                              test data        [no need of recompiling the AS]
+driver.get("")                                                                URL            test data maintenance is easy
+.class                                                                                               test data modification is easy
+                                                                                                       u can run same script with diff TD
+These are the files where we store the test data .
+1.)Property File :store data in(key,value){configurtion datas}
+2.)CSV File        :store data in(comma separated values).
+3.)*Excel File*  :store data in(
+4.)JSON File:
+5.)XML File:
+
+Excel File:
+*Boolean-----------getBooleanCellValue()
+*String-------------toString() or getStringCellValue()
+*Numeric Data---getNumericCellValue()[double]
+*Date--------------getDateCellValue() | getDateTimeCellValue()
+********************************************************************************************************
+1.We should not hard code our test data in our automation scripts.
+2.We should separate all the webelements from Automation script.
+{POM design pattern--->Page Object Model]]]@FindBy(xpath=""username   
+
+.
+)
+        stale----old
+[We can avoid Stale Element Reference Exception.]
+Advantages:
+1.Maintanence of Web Elements is veery easy.
+2.Modification of Web Elements is easy.
+3.Avoid stale element reference exception.
+
+web elemnts is stored in the  POM repository/element repository/page library
+**************************************************************************************************************
+
+TestNG----> Test Next Generation  (Unit testing tool)90% organisation using this
+  it is a developer tool used to perform unit testing.
+TOOLS:
+ *Junit
+ 
+Reasons using this TestNG:
+Batch execution
+Parallel execution      
+Group execution
+Reports.
+
+ we should use---->@Test
+@Test is having a main method
+
+Annotation:
+It is a java type
+Used to provide additional information to the programmer  and also compiler.
+It can be given on the top of the class,method,vaiable.
+
+Reporter.log(" ",true)
+
+Priority---->by default it will be 0,if priority is same it will run alphabetically.
+Invocation count--->by default it will be 1, if it is 0 or -ve it will not run that test case.
+ThreadPoolSize---->by default it will be 1,it is used to run same test case multiple times in parallel.
+Enabled---->by default it will be true,it is used to disable your test case.
+Timeout---->It is used to run time  critical test  cases.
+Groups----->it is used to add a test case to a particular groups.
+
+
+********************************************************************************************************
+@Data Provider;   return object[] or oject[] / non primitive[] or[][](2 d format) integer
+{10,20,30,40}-array present inside the array{{10,20},{30,40},{50,60},{70,80}}
+
+@Test (test case)--->the number of times the test case will run depends on the size of sub array
+
+
